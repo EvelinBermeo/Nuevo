@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calculadora.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <center>
+        <form>
+            <table>
+                <tr><td colspan="4"><input type="text" id="pantalla" placeholder="0"></td></tr>
+                <tr><td><button type="button" class="boton1" onclick="asignar_uno()">1</button></td>
+                    <td> <button type="button" class="boton1" onclick="asignar_dos()">2</button></td>
+                    <td> <button type="button" class="boton1" onclick="asignar_tres()">3</button></td>
+                    <td> <button type="button" class="boton" onclick="asignar_suma()">+</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="boton1" onclick="asignar_cuatro()">4</button></td>
+                    <td> <button type="button" class="boton1" onclick="asignar_cinco()">5</button></td>
+                    <td> <button type="button" class="boton1" onclick="asignar_seis()">6</button></td>
+                    <td> <button type="button" class="boton" onclick="asignar_resta()">-</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="boton1" onclick="asignar_siete()">7</button></td>
+                    <td> <button type="button" class="boton1" onclick="asignar_ocho()">8</button></td>
+                    <td> <button type="button" class="boton1" onclick="asignar_nueve()">9</button></td>
+                    <td> <button type="button" class="boton" onclick="asignar_multi()">*</button></td>
+                <tr>  
+                    <td> <button type="button" class="boton" onclick="asignar_igual()">=</button></td>
+                    <td> <button type="button" class="boton1" onclick="asignar_cero()">0</button></td>
+                    <td> <button type="button" class="boton" onclick="asignar_reset()">C</button></td>
+                    <td> <button type="button" class="boton" onclick="asignar_division()">/</button></td>
+                </tr>  
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
+
+<script type="text/javascript">
+    var valor_digitado="";
+    var dato1="";
+    var dato2="";
+    var operacion="";
+
+    function asignar_uno(){
+        valor_digitado=document.getElementById('pantalla').value;
+        document.getElementById('pantalla').value=valor_digitado+1;
+    }
+    function asignar_dos(){
+        valor_digitado=document.getElementById('pantalla').value;
+        document.getElementById('pantalla').value=valor_digitado+2;
+    }
+    function asignar_tres(){
+        valor_digitado=document.getElementById('pantalla').value;
+        document.getElementById('pantalla').value=valor_digitado+3;
+    }
+    function asignar_cuatro(){
+        valor_digitado=document.getElementById('pantalla').value;
+        document.getElementById('pantalla').value=valor_digitado+4;
+    }
+    function asignar_cinco(){
+        valor_digitado=document.getElementById('pantalla').value;
+        document.getElementById('pantalla').value=valor_digitado+5;
+    }
+    function asignar_seis(){
+        valor_digitado=document.getElementById('pantalla').value;
+        document.getElementById('pantalla').value=valor_digitado+6;
+    }
+    function asignar_siete(){
+        valor_digitado=document.getElementById('pantalla').value;
+        document.getElementById('pantalla').value=valor_digitado+7;
+    }
+    function asignar_ocho(){
+        valor_digitado=document.getElementById('pantalla').value;
+        document.getElementById('pantalla').value=valor_digitado+8;
+    }
+    function asignar_nueve(){
+        valor_digitado=document.getElementById('pantalla').value;
+        document.getElementById('pantalla').value=valor_digitado+9;
+    }
+    function asignar_cero(){
+        valor_digitado=document.getElementById('pantalla').value;
+        document.getElementById('pantalla').value=valor_digitado+0;
+    }
+
+    function asignar_suma(){
+        dato1=document.getElementById('pantalla').value;
+        valor_digitado="";
+        document.getElementById('pantalla').value='';
+        operacion="suma";
+    }
+    function asignar_resta(){
+        dato1=document.getElementById('pantalla').value;
+        valor_digitado="";
+        document.getElementById('pantalla').value='';
+        operacion="resta";
+    }
+    function asignar_multi(){
+        dato1=document.getElementById('pantalla').value;
+        valor_digitado="";
+        document.getElementById('pantalla').value='';
+        operacion="multiplicacion";
+    }
+    function asignar_division(){
+        dato1=document.getElementById('pantalla').value;
+        valor_digitado="";
+        document.getElementById('pantalla').value='';
+        operacion="division";
+    }
+
+    function asignar_igual(){
+        dato2= document.getElementById('pantalla').value;
+        if(operacion=="suma"){
+            document.getElementById('pantalla').value=parseFloat(dato1)+parseFloat(dato2);
+        }
+        if(operacion=="resta"){
+            document.getElementById('pantalla').value=parseFloat(dato1)-parseFloat(dato2);
+        }
+        if(operacion=="multiplicacion"){
+            document.getElementById('pantalla').value=parseFloat(dato1)*parseFloat(dato2);
+        }
+        if(operacion=="division"){
+            document.getElementById('pantalla').value=parseFloat(dato1)/parseFloat(dato2);
+        }
+    }
+
+    function asignar_reset(){
+        dato1=0;
+        dato2=0;
+        document.getElementById('pantalla').value='';
+    }
+
+</script>
