@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras de control if -  if-else - swicht</title>
+</head>
+<body>
+    <!-- <input type="number" id="edad">
+    <button onclick="Comparar();">Calcular</button> 
+
+    Base  <input type="number" id="base"> 
+    Altura  <input type="number" id="altura"> 
+    <button onclick="Calcular();">Calcular</button>-->
+
+    <select id="mes">
+        <option value="1">mes 1</option>
+        <option value="2">mes 2</option>
+        <option value="3">mes 3</option>
+        <option value="4">mes 4</option>
+        <option value="5">mes 5</option>
+        <option value="6">mes 6</option>
+        <option value="7">mes 7</option>
+        <option value="8">mes 8</option>
+        <option value="9">mes 9</option>
+        <option value="10">mes 10</option>
+        <option value="11">mes 11</option>
+        <option value="12">mes 12</option>
+    </select>
+    <button onclick="Mostrar();">Mostrar día</button>
+
+    <div id="mensaje"></div>
+
+    
+</body>
+</html>
+
+<!-- <script>
+    function Comparar() {
+        var edad= parseInt(document.getElementById("edad").value)
+
+        if(edad <=10 ){
+            alert("Eres un niño")
+        }
+
+        if (edad > 10 && edad <18){
+            alert("Eres un adolecente")
+        }
+        if(edad >= 18) {
+            alert("Eres mayor de edad")
+        }
+    }
+</script> 
+
+
+
+<script>
+
+    function Calcular() {
+        var b= parseInt(document.getElementById("base").value);
+        var a= parseInt(document.getElementById("altura").value);
+        var area= (b*a)/2;
+
+        if(area >100){
+            alert("El area es mayor que 100 " + area);
+        }
+
+        else {
+            alert("El area es menor que 100 " + area);
+        }
+    }
+</script>-->
+
+<script>
+    function Mostrar(){
+        var dia = document.getElementById('mes').value;
+
+        switch(dia){
+            case'1': 
+            document.getElementById('mensaje').innerHTML='<h1> Mes de Enero</h1>';
+                break;
+            case '2': 
+            document.getElementById('mensaje').innerHTML='<h1>Mes de Febrero</h1>';
+                break;
+            case '3': 
+            document.getElementById('mensaje').innerHTML='<h1>Mes de Marzo</h1>';
+                break;
+            case '4': 
+            document.getElementById('mensaje').innerHTML='<h1>Mes de Abril</h1>';
+                break;
+            case '5': 
+            document.getElementById('mensaje').innerHTML='<h1>Mes de Mayo</h1>';
+                break;
+            case '6':
+            document.getElementById('mensaje').innerHTML='<h1>Mes de Junio</h1>';
+                break;
+            case '7':    
+            document.getElementById('mensaje').innerHTML='<h1>Mes de Julio</h1>';
+                break;
+            case '8':
+            document.getElementById('mensaje').innerHTML='<h1>Mes de Agosto</h1>';
+                break;
+            case '9':
+            document.getElementById('mensaje').innerHTML='<h1>Mes de Septiembre</h1>';
+                break;
+            case '10':
+            document.getElementById('mensaje').innerHTML='<h1>Mes de Octubre</h1>';
+                break;
+            case '11':
+            document.getElementById('mensaje').innerHTML='<h1>Mes de Nobiembre</h1>';
+                break;
+            case '12':
+            document.getElementById('mensaje').innerHTML='<h1>Mes de Diciembre</h1>';
+                break;
+
+        }
+    }
+</script>
