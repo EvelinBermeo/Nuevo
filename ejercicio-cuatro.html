@@ -36,9 +36,13 @@
         <div id="menor" class="resultado"></div>
         <input type="button" value="Promedio" onclick="Promedio();" class="controls-button"> 
         <div id="promedio" class="resultado"></div>
-        <input type="button" value="Par_impar" onclick="Par_impar();" class="controls-button">
-        <div id="par" class="resultado"></div>  
-        <div id="impar" class="resultado"></div>  
+       <!-- <input type="button" value="Par_impar" onclick="Par_impar();" class="controls-button">
+         <div id="par" class="resultado"></div>  
+        <div id="impar" class="resultado"></div> -->
+        <input type="button" value="impar" onclick="impar();" class="controls-button">  
+        <div id="impar" class="resultado"></div>
+        <input type="button" value="par" onclick="par();" class="controls-button">  
+        <div id="par" class="resultado"></div>
         
 
     </form>
@@ -81,33 +85,63 @@
         var promedio=(num1+num2+num3)/3
         document.getElementById('promedio').innerHTML=' Este es el promedio '+ promedio;
     }
-    function Par_impar() {
+    // function Par_impar() {
+    //     var num1=parseInt(document.getElementById('numero_1').value);
+    //     var num2=parseInt(document.getElementById('numero_2').value);
+    //     var num3=parseInt(document.getElementById('numero_3').value);
+    //     if(num1 % 2 == 0){
+    //         document.getElementById('par').innerHTML=' El Numero ' + num1 + ' Es par '
+    //     }
+    //     else{
+    //         document.getElementById('impar').innerHTML=' El Numero ' + num1  + ' Es impar'
+    //     }
+    //     if(num2 % 2 == 0){
+    //         document.getElementById('par').innerHTML=' El Numero' + num2 + ' Es par '
+    //     }
+    //     else{
+    //         document.getElementById('impar').innerHTML=' El Numero ' + num2 + ' Es Impar '
+    //     }
+    //     if(num3 % 2 == 0){
+    //         document.getElementById('par').innerHTML=' El Numero ' + num3 + ' Es par '
+    //     }
+    //     else{
+    //         document.getElementById('impar').innerHTML=' El Numero ' + num3 + ' Es Impar '
+    //     }
+    // }
+    function impar() {
         var num1=parseInt(document.getElementById('numero_1').value);
         var num2=parseInt(document.getElementById('numero_2').value);
         var num3=parseInt(document.getElementById('numero_3').value);
+        let impar=0;
 
-        if(num1 % 2 == 0){
-            document.getElementById('par').innerHTML=' El Numero ' + num1 + ' Es par '
+        if(num1 % 2 > 0){
+            impar++;
         }
-        else{
-            document.getElementById('impar').innerHTML=' El Numero ' + num1  + ' Es impar'
+        if(num2 % 2 > 0){
+            impar++;
+        }
+        if(num3 % 2 > 0){
+            impar++;
+        }
+        document.getElementById('impar').innerHTML=' Se encontraron ' + impar + 'impar'
+    }
+    function par (){
+        var num1=parseInt(document.getElementById('numero_1').value);
+        var num2=parseInt(document.getElementById('numero_2').value);
+        var num3=parseInt(document.getElementById('numero_3').value);
+        let par=0;
+        
+        if(num1 % 2 == 0){
+            par++;
         }
         if(num2 % 2 == 0){
-            document.getElementById('par').innerHTML=' El Numero' + num2 + ' Es par '
-        }
-        else{
-            document.getElementById('impar').innerHTML=' El Numero ' + num2 + ' Es Impar '
+            par++;
         }
         if(num3 % 2 == 0){
-            document.getElementById('par').innerHTML=' El Numero ' + num3 + ' Es par '
+            par++;
         }
-        else{
-            document.getElementById('impar').innerHTML=' El Numero ' + num3 + ' Es Impar '
-        
-        }
+        document.getElementById('par').innerHTML=' Se encontraron ' + par + 'par'
 
-  
-    
     }
 </script>
 </div>
