@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href = "https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="css/ejercicio-tres.css">
 </head>
 <body>
-    
+    <header>
+        <nav>
+           <ul>
+              <li><a href="index.html"> Calculadora</a></li>
+              <li><a href="ejercicio-uno.html"> Ejercio 1</a></li>
+              <li><a href="ejercicio-dos.html"> Ejercicio 2</a></li>
+              <li><a href="ejercicio-tres.html"> Ejercicio 3</a></li>
+              <li><a href="ejercicio-cuatro.html"> Ejercicio 4</a></li>     
+           </ul>
+        </nav>
+       </header>
+    <h1>Ejercicio 3</h1> <br><br>
+    <div class="contenedor">
+    <form>
+        Primer Parcial: <input type="number" id="t1" placeholder="Ingrese nota1" id="nota1" class="control" >
+        <br><br>
+        Segundo Parcial: <input type="number" id="t2" placeholder="Ingrese nota2" id="nota2" class="control" >
+        <br><br>
+        Tercer Parcial: <input type="number" id="t3" placeholder="Ingrese nota3" id="nota3" class="control" >
+        <br><br>
+        Exámen Final: <input type="number" id="t4" placeholder="Ingrese nota4" id="nota4" class="control" >
+        <br><br>
+        <input type="button" value="Calcular" onclick="Calcular();" class="controls-button">
+    </form>
+
+<p id="promedio"></p>
+
 </body>
 </html>
+
+<script> 
+    function Calcular() { 
+        var vr1 = document.getElementById('t1').value; 
+        var vr2 = document.getElementById('t2').value; 
+        var vr3 = document.getElementById('t3').value; 
+        var vr4 = document.getElementById('t4').value; 
+        var p = (parseFloat(vr1)+parseFloat(vr2)+parseFloat(vr3)+parseFloat(vr1))/4; 
+        document.getElementById('promedio').innerHTML = 'Nota final:' + p; 
+        
+    }
+    </script>
+    </div>

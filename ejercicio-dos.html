@@ -4,30 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular aumento</title>
+    <title>Ejercicio 2</title>
+    <link href = "https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/ejercicio-dos.css">
 </head>
 <body>
-    Sueldo<input type="number" id="sueldo"> <br><br>
-    
-    <button onclick="Calcular();">Calcular</button>
-    
+    <header>
+        <nav>
+           <ul>
+              <li><a href="index.html"> Calculadora</a></li>
+              <li><a href="ejercicio-uno.html"> Ejercio 1</a></li>
+              <li><a href="ejercicio-dos.html"> Ejercicio 2</a></li>
+              <li><a href="ejercicio-tres.html"> Ejercicio 3</a></li>
+              <li><a href="ejercicio-cuatro.html"> Ejercicio 4</a></li>     
+           </ul>
+        </nav>
+       </header>
+
+    <h1>Ejercicio 2</h1><br>
+    <div class="contenedor">
+    Aumentos <br><input type="number" id="aumento" placeholder="Ingrese su sueldo" id="Aumento" class="control"> <br><br>
+     <button onclick="calcular();"class="controls-button" >Calcular</button>
 </body>
 </html>
 
 <script>
-    function Calcular(){
-        var sueldo =parseInt(document.getElementById("sueldo").value);
-        var aumento = 0 ;
+    function calcular(){
+        var sueldo= parseInt(document.getElementById('aumento').value);
+        var aumento= 0;
+        var sueldo_aumento=0;
 
-        if (sueldo > 1000000) {
-            aumento = sueldo*0.5;
+        if(sueldo >= 1000000){
+            aumento=sueldo*0.05;
         }
-        if ( sueldo < 800000) {
-            aumento = sueldo+80000;
+        if(sueldo <= 800000){
+            aumento=sueldo*0.10;
         }
-        alert('el aumento es '+ aumento) 
-
-
-
-    }
+        sueldo_aumento=sueldo+aumento;
+        alert('El sueldo es: ' +  sueldo_aumento); }
 </script>
+</div>

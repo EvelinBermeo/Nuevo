@@ -1,8 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+}
 body {
+    background: #FEFEFE;
+}
+header {
+    width: 100%;
+
+}
+header nav {
+    background: rgb(194, 155, 155);
+    width: 100%;
+
+}
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+nav ul li {
+    display: inline-block;
+    position: relative;
+    border-right: 2px outset rosybrown;
+    border-bottom: 2px outset rosybrown;
+    
+}
+nav ul li:hover {
+    background: rgb(187, 135, 135);
+}
+nav ul li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    font-family: 'Oswald';
+    font-size: 1em;
+}
+/* body {
     margin-top: 5%;
     font: 80px arial,helvetica,sans-serif; 
     font-size: 50px;
-}
+} */
 table {
     background-color:  #2c3e53;
     border-radius: 15px;

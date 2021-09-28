@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular Sueldo</title>
+    <link href = "https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <title>Ejercicio 1</title>
     <link rel="stylesheet" href="css/ejercicio-uno.css">
 </head>
 <body>
-    hora semana<input type="number" id="hora"> <br><br>
+    <header>
+     <nav>
+        <ul>
+            <li><a href="index.html"> Calculadora</a></li>
+           <li><a href="ejercicio-uno.html"> Ejercio 1</a></li>
+           <li><a href="ejercicio-dos.html"> Ejercicio 2</a></li>
+           <li><a href="ejercicio-tres.html"> Ejercicio 3</a></li>
+           <li><a href="ejercicio-cuatro.html"> Ejercicio 4</a></li>     
+        </ul>
+     </nav>
+    </header>
+    <h1>Ejercicio 1</h1><br>
 
-    <button onclick="Calcular();">Calcular</button>
+   <div class="contenedor">Hora por semana <br> <input type="number" placeholder="Ingrese numero de hora(s)" id="hora" class="control" > <br><br>
+
+    <button onclick="Calcular();" class="controls-button">Calcular</button>
+   
     
 </body>
 </html>
+ 
 <script type="text/javascript">
     function Calcular() {
        var horas_trabajadas= parseInt(document.getElementById("hora").value);
@@ -28,7 +44,6 @@
 
         sueldo = (extra*15000)+(40*10000);
       }
-     alert('el sueldo es '+ sueldo) 
-
-    }  
+      alert('el sueldo es '+ sueldo) }  
 </script>
+</div>
