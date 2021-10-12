@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
-    <link href = "https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/ejercicio-dos.css">
+    <title>Generar</title>
+    <link rel="stylesheet" href="css/ejercicio-uno.css">
 </head>
 <body>
     <header>
@@ -20,31 +19,28 @@
             <li><a href="Multiplo3.html"> Ejercicio 5</a></li>
             <li><a href="ejercicio-cinco.html"> Ejercicio 6</a></li>  
             <li><a href="sumatoria.html"> Ejercicio 7</a></li>   
-            <li><a href="generar.html"> Ejercicio 8</a></li>    
-           </ul>
+            <li><a href="generar.html"> Ejercicio 8</a></li> 
+          </ul>
         </nav>
        </header>
-
-    <h1>Ejercicio 2</h1><br>
+    <h1>Mostrará la serie correspondiente.</h1><br>
     <div class="contenedor">
-    Aumentos <br><input type="number" id="aumento" placeholder="Ingrese su sueldo" id="Aumento" class="control"> <br><br>
-     <button onclick="calcular();"class="controls-button" >Calcular</button>
+        <input class="control" type="number" id="numero">
+        <button class="controls-button" onclick="Escalar();">Mostrar</button>
+        <div id="resultado"></div>
 </body>
 </html>
-
 <script>
-    function calcular(){
-        var sueldo= parseInt(document.getElementById('aumento').value);
-        var aumento= 0;
-        var sueldo_aumento=0;
-
-        if(sueldo >= 1000000){
-            aumento=sueldo*0.05;
+    function Escalar(){
+        var numero=parseInt(document.getElementById('numero').value);
+        var valor=0;
+        var texto='';
+        for(var i=0; i<=numero; i++) {
+            if(i % 5 == 0) {
+                texto +='<h1>' + i + '</h1>';
+            }
         }
-        if(sueldo <= 800000){
-            aumento=sueldo*0.10;
-        }
-        sueldo_aumento=sueldo+aumento;
-        alert('El sueldo es: ' +  sueldo_aumento); }
+        document.getElementById('resultado').innerHTML=texto;
+    }
 </script>
 </div>
