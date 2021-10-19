@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Datos</title>
+    <link rel="stylesheet" href="css/produccion.css">
+</head>
+<body>
+    <header>
+        <nav>
+           <ul>
+            <li><a href="index.html"> Calculadora</a></li>
+            <li><a href="ejercicio-uno.html"> Ejercicio 1</a></li>
+            <li><a href="ejercicio-dos.html"> Ejercicio 2</a></li>
+            <li><a href="ejercicio-tres.html"> Ejercicio 3</a></li>
+            <li><a href="ejercicio-cuatro.html"> Ejercicio 4</a></li>     
+            <li><a href="Multiplo3.html"> Ejercicio 5</a></li>
+            <li><a href="ejercicio-cinco.html"> Ejercicio 6</a></li>  
+            <li><a href="sumatoria.html"> Ejercicio 7</a></li>   
+            <li><a href="generar.html"> Ejercicio 8</a></li> 
+            <li><a href="base_datos.html">Base_datos</a></li>
+           </ul>
+        </nav>
+       </header> <br><br><br><br>
+       <h1>Registrar Produccion</h1><br><br>
+       <center>
+    <div class="contenedor">
+    <form>
+        <p>Id producción</p><input type="text" id="id_produccion" class="control" placeholder="Digite Id produccion"> <br>
+        <p> Estado</p><input type="text" id="estado" class="control" placeholder="Digite estado_producto"> <br>
+        <p> Cantidad</p> <input type="text" id="cantidad" class="control" placeholder="Digite la cantidad"> <br>
+        <p> Fecha</p> <input type="date" id="fecha" class="control" placeholder="Digite la fecha"> <br>
+        <p> Observación</p> <input type="text" id="observacion" class="control" placeholder="Digite observacion"> <br>
+        <button type="button" onclick="(Registrar_produccion())" class="controls-button">Registrar</button>
+    </form>
+    <br>
+            <table class="tabla">
+                <th>Id producción</th>
+                <th>Estado</th>
+                <th>Cantidad</th>
+                <th>Fecha</th>
+                <th>Observación</th>
+                <tbody id='Tabla'>
+
+                </tbody>
+            </table>   
+</body>
+</html>
+</div> <br><br>
+<script>
+     var producc=[];
+
+function Registrar_produccion(){
+    var produccion= document.getElementById('id_produccion').value;
+    var estado= document.getElementById('estado').value;
+    var cantidad= document.getElementById('cantidad').value;
+    var fecha= document.getElementById('fecha').value;
+    var observacion= document.getElementById('observacion').value;
+
+    producc.push({produccion,estado,cantidad,fecha,observacion});
+    alert("Se registro la  " +produccion);
+    Listar_produccion();
+}
+
+function Listar_produccion(){
+
+var datos=""
+
+
+for(var i=0; i<producc.length; i++){
+    datos+="<tr><td>"+producc[i].produccion+"</td>";
+    datos+="<td>"+producc[i].estado+"</td>";
+    datos+="<td>"+producc[i].cantidad+"</td>";
+    datos+="<td>"+producc[i].fecha+"</td>";
+    datos+="<td>"+producc[i].observacion+"</td>";
+    datos+="</tr>"
+}
+document.getElementById('Tabla').innerHTML=datos;
+}
+</script>
