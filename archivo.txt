@@ -1,0 +1,11 @@
+Información de mi computador 
+Total Memoria :34147840000
+Versión del sistema operativo :10.0.18363
+Arquitectura CPU : x64
+Plataforma : win32
+Cantidad de Memoria: 26.566254592
+Identifica el edianness : LE
+Nombre de host : PITAPRTNNFSD160
+Matriz de promedio : 0,0,0
+Directorio predeterminado : C:\Users\SENA\AppData\Local\Temp
+Nombre del sistema operativo : Windows_NT
